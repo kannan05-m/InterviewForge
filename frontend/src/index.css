@@ -1,0 +1,47 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0D1117;
+  --surface: #161B22;
+  --surface2: #1C2330;
+  --border: rgba(255,255,255,0.08);
+  --border-em: rgba(255,255,255,0.14);
+  --text1: #E6EDF3;
+  --text2: #8B949E;
+  --text3: #484F58;
+  --blue: #4F8EF7;
+  --blue-soft: rgba(79,142,247,0.12);
+  --amber: #F5A623;
+  --amber-soft: rgba(245,166,35,0.12);
+  --green: #3FB950;
+  --green-soft: rgba(63,185,80,0.12);
+  --red: #F85149;
+  --red-soft: rgba(248,81,73,0.12);
+  --purple: #BC8CFF;
+  --purple-soft: rgba(188,140,255,0.12);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text1);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-em); border-radius: 3px; }
+
+input, textarea, select, button { font-family: inherit; }
+
+@keyframes pulse {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
