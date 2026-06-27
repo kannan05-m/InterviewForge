@@ -56,7 +56,7 @@ export default function App() {
     )
 
     try {
-      const res = await fetch('/api/analyze', { method: 'POST', body: form })
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/analyze`, { method: 'POST', body: form })
       timers.forEach(clearTimeout)
 
       if (!res.ok) {
@@ -90,7 +90,7 @@ export default function App() {
   }
 
   async function evaluateAnswer(q, answer) {
-    const res = await fetch('/api/evaluate', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/evaluate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question: q.q, type: q.type, answer, gap_skill: q.gap_skill || '' }),
