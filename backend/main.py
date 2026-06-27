@@ -18,14 +18,13 @@ app = FastAPI(title="InterviewForge API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://interviewforge.vercel.app",
-        "https://interviewforge-kannan05-m.vercel.app",
-    ],
-    allow_methods=["*"],
-    allow_headers=["*"],
+   allow_origins=[
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://interview-forge-blue.vercel.app",
+    "https://interviewforge.vercel.app",
+    "https://interviewforge-kannan05-m.vercel.app",
+],
 )
 
 
